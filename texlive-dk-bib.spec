@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /biblio/bibtex/contrib/dk-bib
+# catalog-date 2009-09-25 22:54:35 +0200
+# catalog-license other-free
+# catalog-version 0.6
 Name:		texlive-dk-bib
 Version:	0.6
 Release:	1
@@ -58,6 +64,7 @@ order files for BibTeX8.
 %doc %{_texmfdistdir}/doc/latex/dk-bib/dk-bib.pdf
 #- source
 %doc %{_texmfdistdir}/source/latex/dk-bib/Makefile
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +75,5 @@ order files for BibTeX8.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
