@@ -6,7 +6,7 @@
 # catalog-version 0.6
 Name:		texlive-dk-bib
 Version:	0.6
-Release:	1
+Release:	2
 Summary:	Danish variants of standard BibTeX styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/dk-bib
