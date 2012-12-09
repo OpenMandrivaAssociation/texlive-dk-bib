@@ -65,3 +65,17 @@ order files for BibTeX8.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.6-2
++ Revision: 751002
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.6-1
++ Revision: 718239
+- texlive-dk-bib
+- texlive-dk-bib
+- texlive-dk-bib
+- texlive-dk-bib
+
