@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /biblio/bibtex/contrib/dk-bib
-# catalog-date 2009-09-25 22:54:35 +0200
-# catalog-license other-free
-# catalog-version 0.6
 Name:		texlive-dk-bib
-Version:	0.6
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Danish variants of standard BibTeX styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/dk-bib
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ style file. Dk-bib also comes with a couple of Danish sorting
 order files for BibTeX8.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -58,24 +52,11 @@ order files for BibTeX8.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.6-2
-+ Revision: 751002
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.6-1
-+ Revision: 718239
-- texlive-dk-bib
-- texlive-dk-bib
-- texlive-dk-bib
-- texlive-dk-bib
-
