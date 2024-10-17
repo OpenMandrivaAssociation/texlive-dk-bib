@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Danish variants of standard BibTeX styles
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/dk-bib
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/dk-bib
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dk-bib.doc.r%{version}.tar.xz
